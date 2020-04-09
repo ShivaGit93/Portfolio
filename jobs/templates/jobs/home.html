@@ -2,12 +2,14 @@
 <!doctype html>
 <html lang="en">
   <head>
+    {% load staticfiles %}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.6">
     <title>Portfolio Home</title>
+
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
 
@@ -53,7 +55,7 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav ml-auto">
       <a class="nav-item nav-link active" href="#">Twitter</a>
-      <a class="nav-item nav-link" href="#">Resume</a>
+      <a class="nav-item nav-link" href="{% static 'resume.pdf' %}">Resume</a>
       <a class="nav-item nav-link" href="#">Blog</a>
     </div>
   </div>
@@ -68,6 +70,7 @@
       <p class="lead text-muted">Hey This is my first Site using Django</p>
       <p>
         <a href="mailto:shivshopextra011@gmail.com" class="btn btn-primary my-2">Email Me</a>
+        <img src="{% static 'download.jpg %}"/>
 
       </p>
     </div>
@@ -82,6 +85,7 @@
           <div class="card mb-4 shadow-sm">
             <img class="card-body" src="{{ job.image.url}}"/>
             <div class="card-body"
+
               <p class="card-text"> {{ job.summary }} </p>
           </div>
           </div>
