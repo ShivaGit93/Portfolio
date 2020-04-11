@@ -10,7 +10,7 @@ class Blog(models.Model):
         return self.titles
 
     def summary(self):
-        return self.body[:200]
+        return self.body[:1000]
     def pub_date_modified(self):
         return self.pub_date.strftime(' %b %e %Y')
 
